@@ -31,7 +31,8 @@ docker run -it --rm=true hello-world:8u131
 
 Let's assume we also want to run our Java class in a Java 9 environment to test it. We can easily take 
 the same artifact (our HelloWorld.class file) that was compiled with Java 8u131 and run it
-in a Java 9 container.
+in a Java 9 container. We use a different Dockerfile which specifies the Java 9 JVM as the base image.
+Then we build it and tag it so we have both the Java 8 and Java 9 images to run either.
 
 ```
 docker build -t hello-world:9b170 -f Dockerfile-9b170 .
