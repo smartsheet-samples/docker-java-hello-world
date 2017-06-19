@@ -16,7 +16,7 @@ We can then take our Java class file (aka our build artifact) and bundle it into
 container image.
 
 ```
-docker build -t hello-world .
+docker build -t hello-world:8u131 -f Dockerfile-8u131 .
 ```
 
 ## Run Container
@@ -24,5 +24,16 @@ docker build -t hello-world .
 Once we have a compiled Java class we can simply execute it with a Java Runtime Environment (JRE).
 
 ```
-docker run -it --rm=true hello-world
+docker run -it --rm=true hello-world:8u131
+```
+
+## Build and Run Container with Java 9
+
+Let's assume we also want to run our Java class in a Java 9 environment to test it. We can easily take 
+the same artifact (our HelloWorld.class file) that was compiled with Java 8u131 and run it
+in a Java 9 container.
+
+```
+docker build -t hello-world:9b170 -f Dockerfile-9b170 .
+docker run -it --rm=true hello-world:9b170
 ```
