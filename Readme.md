@@ -1,5 +1,7 @@
 
-Simple example of using Docker containers to build and run a Java application.
+This project provides a simple example of using Docker containers to build and run a Java application without installing Java. The sample is referenced in the DZone article [Containers are the new Build Artifact](https://dzone.com/articles/containers-are-the-new-build-artifact).
+
+This sample does not use the Smartsheet API.
 
 ## Compile Java Class
 
